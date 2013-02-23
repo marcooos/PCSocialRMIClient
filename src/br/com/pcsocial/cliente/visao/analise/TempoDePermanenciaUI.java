@@ -25,6 +25,7 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 		int im = 0;
 		int ia = 0;
 		int in = 0;
+		//
 		HospedagemCliente hc = new HospedagemCliente();
 		List<Hospedagem> listHospedagem = new ArrayList<Hospedagem>();
 
