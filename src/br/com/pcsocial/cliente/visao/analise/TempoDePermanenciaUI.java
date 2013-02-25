@@ -25,7 +25,6 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 		int im = 0;
 		int ia = 0;
 		int in = 0;
-		//
 		HospedagemCliente hc = new HospedagemCliente();
 		List<Hospedagem> listHospedagem = new ArrayList<Hospedagem>();
 
@@ -67,31 +66,107 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 
 	@Override
 	public XYSeriesCollection createXYDataset(String nomeSerie) {
-		XYSeries series = new XYSeries(nomeSerie);
-		series.add(1, 1);
+		XYSeriesCollection result = new XYSeriesCollection();
+		int i = 0;
+		int im = 0;
+		int ia = 0;
+		int in = 0;
+		HospedagemCliente hc = new HospedagemCliente();
+		List<Hospedagem> listHospedagem = new ArrayList<Hospedagem>();
+
+		List<String> listMercado = new ArrayList<String>();
+		List<Long> listQtde = new ArrayList<Long>();
+
+		listHospedagem = hc.getListarHospedagems(super.getjDataInicial()
+				.getDate(), super.getjDataFinal().getDate());
+		while (i < listHospedagem.size()) {
+			while (im <= i) {
+				if (!(listMercado.contains(listHospedagem.get(i).getMercado()
+						.getDescricao()))) {
+					listMercado.add(listHospedagem.get(i).getMercado()
+							.getDescricao());
+					listQtde.add(listHospedagem.get(i).getDiasHospedado());
+				} else {
+					while (ia < listQtde.size()) {
+						if (listMercado.get(ia).equals(
+								listHospedagem.get(i).getMercado()
+								.getDescricao())) {
+							listQtde.set(ia, (listHospedagem.get(i)
+									.getDiasHospedado() + listQtde.get(ia)));
+						}
+						ia++;
+					}
+				}
+				ia = 0;
+				im++;
+			}
+			i++;
+		}
+		while (in < listQtde.size()) {
+			XYSeries series = new XYSeries(listMercado.get(in));
+			int id = 0;
+			while (id < super.getjDataFinal()
+					.getDate().getDate()){
+				series.add((super.getjDataInicial()
+						.getDate().getDate()+id),listQtde.get(in).doubleValue());
+				id++;
+			}
+			result.addSeries(series);
+			in ++;
+		}
+		/*series.add(1, 1);
 		series.add(1, 2);
 		series.add(2, 1);
 		series.add(3, 9);
-		series.add(4, 10);
-
-		XYSeriesCollection result = new XYSeriesCollection();
-		result.addSeries(series);
+		series.add(4, 10);*/
+		
 		return result;
 	}
 
 	@Override
 	public CategoryDataset createBarDataset(String nomeSerie) {
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-		dataset.setValue(6, "Cooporativo", "Jan");
-		dataset.setValue(9, "Turismo", "Jan");
-		dataset.setValue(9, "Neg—cios", "Jan");
-		dataset.setValue(4, "Cooporativo", "Fev");
-		dataset.setValue(10, "Turismo", "Fev");
-		dataset.setValue(1, "Neg—cios", "Fev");
-		dataset.setValue(6, "Cooporativo", "Mar");
-		dataset.setValue(9, "Turismo", "Mar");
-		dataset.setValue(9, "Neg—cios", "Mar");
+		int i = 0;
+		int im = 0;
+		int ia = 0;
+		int in = 0;
+		HospedagemCliente hc = new HospedagemCliente();
+		List<Hospedagem> listHospedagem = new ArrayList<Hospedagem>();
 
+		List<String> listMercado = new ArrayList<String>();
+		List<Long> listQtde = new ArrayList<Long>();
+
+		listHospedagem = hc.getListarHospedagems(super.getjDataInicial()
+				.getDate(), super.getjDataFinal().getDate());
+		while (i < listHospedagem.size()) {
+			while (im <= i) {
+				if (!(listMercado.contains(listHospedagem.get(i).getMercado()
+						.getDescricao()))) {
+					listMercado.add(listHospedagem.get(i).getMercado()
+							.getDescricao());
+					listQtde.add(listHospedagem.get(i).getDiasHospedado());
+				} else {
+					while (ia < listQtde.size()) {
+						if (listMercado.get(ia).equals(
+								listHospedagem.get(i).getMercado()
+								.getDescricao())) {
+							listQtde.set(ia, (listHospedagem.get(i)
+									.getDiasHospedado() + listQtde.get(ia)));
+						}
+						ia++;
+					}
+				}
+				ia = 0;
+				im++;
+			}
+			i++;
+		}
+		while (in < listQtde.size()) {
+			dataset.setValue(listQtde.get(in),listMercado.get(in),String.valueOf("de: "+super.getjDataInicial()
+				.getDate() +" atŽ "+ super.getjDataFinal().getDate()));
+			in ++;
+		}
+		
 		return dataset;
 	}
 
