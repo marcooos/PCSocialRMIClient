@@ -44,7 +44,7 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 					while (ia < listQtde.size()) {
 						if (listMercado.get(ia).equals(
 								listHospedagem.get(i).getMercado()
-								.getDescricao())) {
+										.getDescricao())) {
 							listQtde.set(ia, (listHospedagem.get(i)
 									.getDiasHospedado() + listQtde.get(ia)));
 						}
@@ -57,8 +57,8 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 			i++;
 		}
 		while (in < listQtde.size()) {
-			result.setValue(listMercado.get(in),listQtde.get(in));
-			in ++;
+			result.setValue(listMercado.get(in), listQtde.get(in));
+			in++;
 		}
 		return result;
 
@@ -90,7 +90,7 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 					while (ia < listQtde.size()) {
 						if (listMercado.get(ia).equals(
 								listHospedagem.get(i).getMercado()
-								.getDescricao())) {
+										.getDescricao())) {
 							listQtde.set(ia, (listHospedagem.get(i)
 									.getDiasHospedado() + listQtde.get(ia)));
 						}
@@ -105,21 +105,19 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 		while (in < listQtde.size()) {
 			XYSeries series = new XYSeries(listMercado.get(in));
 			int id = 0;
-			while (id < super.getjDataFinal()
-					.getDate().getDate()){
-				series.add((super.getjDataInicial()
-						.getDate().getDate()+id),listQtde.get(in).doubleValue());
+			while (id < super.getjDataFinal().getDate().getDate()) {
+				series.add((super.getjDataInicial().getDate().getDate() + id),
+						listQtde.get(in).doubleValue());
 				id++;
 			}
 			result.addSeries(series);
 			in ++;
 		}
-		/*series.add(1, 1);
-		series.add(1, 2);
-		series.add(2, 1);
-		series.add(3, 9);
-		series.add(4, 10);*/
-		
+		/*
+		 * series.add(1, 1); series.add(1, 2); series.add(2, 1); series.add(3,
+		 * 9); series.add(4, 10);
+		 */
+
 		return result;
 	}
 
@@ -149,7 +147,7 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 					while (ia < listQtde.size()) {
 						if (listMercado.get(ia).equals(
 								listHospedagem.get(i).getMercado()
-								.getDescricao())) {
+										.getDescricao())) {
 							listQtde.set(ia, (listHospedagem.get(i)
 									.getDiasHospedado() + listQtde.get(ia)));
 						}
@@ -162,11 +160,14 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 			i++;
 		}
 		while (in < listQtde.size()) {
-			dataset.setValue(listQtde.get(in),listMercado.get(in),String.valueOf("de: "+super.getjDataInicial()
-				.getDate() +" atŽ "+ super.getjDataFinal().getDate()));
-			in ++;
+			dataset.setValue(
+					listQtde.get(in),
+					listMercado.get(in),
+					String.valueOf("de: " + super.getjDataInicial().getDate()
+							+ " atŽ " + super.getjDataFinal().getDate()));
+			in++;
 		}
-		
+
 		return dataset;
 	}
 
