@@ -109,13 +109,13 @@ public class AdicionarTarifaUI extends JDialog {
 		// Instanciar Janela
 		dmsTela = new Dimension(800, 600);
 		adicionarTarifa = new JDialog();
-		// Título da Janela
+		// T√£tulo da Janela
 		adicionarTarifa.setTitle(t);
 
 		// Textos
-		lbDescricao = new JLabel("Descrição", SwingConstants.RIGHT);
+		lbDescricao = new JLabel("Descri√ß√£o", SwingConstants.RIGHT);
 		lbDescricao.setPreferredSize(dmsLabel);
-		lbCodPms = new JLabel("Cód. Pms", SwingConstants.RIGHT);
+		lbCodPms = new JLabel("C√£d. Pms", SwingConstants.RIGHT);
 		lbCodPms.setPreferredSize(dmsLabel);
 		lbClasse = new JLabel("", SwingConstants.LEFT);
 		lbClasse.setPreferredSize(dmsLabel);
@@ -130,8 +130,8 @@ public class AdicionarTarifaUI extends JDialog {
 
 		// Check Box
 		jcVendaOnline = new JCheckBox("Venda on-line");
-		jcTarifaVariavel = new JCheckBox("Tarifa on-line variável");
-		// Lista de restrições
+		jcTarifaVariavel = new JCheckBox("Tarifa on-line vari√£vel");
+		// Lista de restri√ß√£es
 		restricoesTarifaL = restricoesTarifa.listaDeRestricoes();
 		int i = 0;
 		int f = restricoesTarifaL.size();
@@ -156,7 +156,7 @@ public class AdicionarTarifaUI extends JDialog {
 			try {
 				lbClasse.setText(classes.getDescricao());
 			} catch (NullPointerException e ) {
-				lbClasse.setText("Tarifa não classificada");
+				lbClasse.setText("Tarifa n√£o classificada");
 			}
 			listaRestTarifas = tarifa.getRestricoes();
 			Restricoes restCompara = new Restricoes();
@@ -202,7 +202,7 @@ public class AdicionarTarifaUI extends JDialog {
 		panelVendaOnline.setBorder(javax.swing.BorderFactory
 				.createTitledBorder("Realiza venda on-line"));
 		panelRestricoes.setBorder(javax.swing.BorderFactory
-				.createTitledBorder("Restrições das Tarifas"));
+				.createTitledBorder("Restri√ß√£es das Tarifas"));
 
 		// Acoes
 		btnConfirmar.setIcon(new ImageIcon(
@@ -327,7 +327,7 @@ public class AdicionarTarifaUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro realizado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -367,7 +367,7 @@ public class AdicionarTarifaUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro alterado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -379,9 +379,9 @@ public class AdicionarTarifaUI extends JDialog {
 				if (javax.swing.JOptionPane
 						.showConfirmDialog(
 								null,
-								"Deseja cancelar a operação? \n"
-										+ " Todas as informações não salvas serão perdidas",
-								"Confirme sua operação ",
+								"Deseja cancelar a opera√ß√£o? \n"
+										+ " Todas as informa√ß√£es n√£o salvas ser√£o perdidas",
+								"Confirme sua opera√ß√£o ",
 								javax.swing.JOptionPane.YES_NO_OPTION, 0,
 								new ImageIcon(
 										getClass().getResource("/gui/icones/acoes/alerta.png"))) == 0) {

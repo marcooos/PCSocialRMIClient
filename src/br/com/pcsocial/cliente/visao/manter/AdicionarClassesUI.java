@@ -48,11 +48,11 @@ public class AdicionarClassesUI extends JDialog {
 		// Instanciar Janela
 		dmsTela = new Dimension(800, 600);
 		adicionarClasses = new JDialog();
-		// Título da Janela
+		// T√£tulo da Janela
 		adicionarClasses.setTitle(t);
 
 		// Textos
-		lbDescricao = new JLabel("Descrição", SwingConstants.RIGHT);
+		lbDescricao = new JLabel("Descri√ß√£o", SwingConstants.RIGHT);
 		lbDescricao.setPreferredSize(dmsLabel);
 		
 		// Editores
@@ -180,7 +180,7 @@ public class AdicionarClassesUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro realizado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -193,7 +193,7 @@ public class AdicionarClassesUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro alterado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -205,9 +205,9 @@ public class AdicionarClassesUI extends JDialog {
 				if (javax.swing.JOptionPane
 						.showConfirmDialog(
 								null,
-								"Deseja cancelar a operação? \n"
-										+ " Todas as informações não salvas serão perdidas",
-								"Confirme sua operação ",
+								"Deseja cancelar a opera√ß√£o? \n"
+										+ " Todas as informa√ß√£es n√£o salvas ser√£o perdidas",
+								"Confirme sua opera√ß√£o ",
 								javax.swing.JOptionPane.YES_NO_OPTION, 0,
 								new ImageIcon(
 										getClass().getResource("/gui/icones/acoes/alerta.png"))) == 0) {

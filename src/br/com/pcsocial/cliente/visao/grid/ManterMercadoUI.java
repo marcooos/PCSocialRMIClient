@@ -87,7 +87,7 @@ public class ManterMercadoUI extends ManterBaseUI {
 			am.alterarMercado(retornoSel);
 		} catch (NullPointerException e1) {
 			javax.swing.JOptionPane.showMessageDialog(null,
-					"Selecione um registro para edição", "Informação", 0,
+					"Selecione um registro para edi√ß√£o", "Informa√ß√£o", 0,
 					new ImageIcon(getClass().getResource("/gui/icones/acoes/informacao.png")));
 		}
 	}

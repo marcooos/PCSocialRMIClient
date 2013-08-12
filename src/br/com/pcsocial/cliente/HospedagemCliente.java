@@ -13,7 +13,7 @@ import br.com.pcsocial.servidor.servico.HospedagemServ;
 public class HospedagemCliente {
 
 	@SuppressWarnings("unchecked")
-	public List<Hospedagem> getListarHospedagems(Date dataInicial,
+	public List<Hospedagem> getListarHospedagem(Date dataInicial,
 			Date dataFinal) {
 		try {
 			HospedagemServ mc = (HospedagemServ) Naming.lookup("rmi://"

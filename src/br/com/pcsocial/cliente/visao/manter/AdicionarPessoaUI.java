@@ -115,7 +115,7 @@ public class AdicionarPessoaUI extends JDialog {
 		// Instanciar Janela
 		dmsTela = new Dimension(800, 600);
 		adicionarPessoa = new JDialog();
-		// Título da Janela
+		// T√£tulo da Janela
 		adicionarPessoa.setTitle(t);
 
 		// Textos
@@ -145,7 +145,7 @@ public class AdicionarPessoaUI extends JDialog {
 		lbCidade.setPreferredSize(dmsLabelDois);
 		lbEstado = new JLabel("Estado", SwingConstants.RIGHT);
 		lbEstado.setPreferredSize(dmsLabelDois);
-		lbPais = new JLabel("País", SwingConstants.RIGHT);
+		lbPais = new JLabel("Pa√£s", SwingConstants.RIGHT);
 		lbPais.setPreferredSize(dmsLabelDois);
 		lbSelecionarPessoa = new JLabel(" ", SwingConstants.RIGHT);
 		lbSelecionarPessoa.setPreferredSize(dmsLabelPesquisa);
@@ -185,8 +185,8 @@ public class AdicionarPessoaUI extends JDialog {
 
 		// Check Box
 		jcAtribucaoCliente = new JCheckBox("Cliente");
-		jcAtribucaoHospede = new JCheckBox("Hóspede");
-		jcAtribucaoUsuario = new JCheckBox("Usuário");
+		jcAtribucaoHospede = new JCheckBox("H√£spede");
+		jcAtribucaoUsuario = new JCheckBox("Usu√£rio");
 		jcAtribucaoOperadora = new JCheckBox("Operadora");
 
 		// Atribuir campos a pessoa
@@ -253,7 +253,7 @@ public class AdicionarPessoaUI extends JDialog {
 		panelCentral.setBorder(javax.swing.BorderFactory
 				.createTitledBorder("Dados gerais"));
 		panelTipoPessoas.setBorder(javax.swing.BorderFactory
-				.createTitledBorder("Atribuições da pessoa"));
+				.createTitledBorder("Atribui√ß√£es da pessoa"));
 
 		// Acoes Check-box
 		jcAtribucaoCliente.addActionListener(al);
@@ -375,7 +375,7 @@ public class AdicionarPessoaUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro realizado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -402,7 +402,7 @@ public class AdicionarPessoaUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro alterado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -414,9 +414,9 @@ public class AdicionarPessoaUI extends JDialog {
 				if (javax.swing.JOptionPane
 						.showConfirmDialog(
 								null,
-								"Deseja cancelar a operação? \n"
-										+ " Todas as informações não salvas serão perdidas",
-								"Confirme sua operação ",
+								"Deseja cancelar a opera√ß√£o? \n"
+										+ " Todas as informa√ß√£es n√£o salvas ser√£o perdidas",
+								"Confirme sua opera√ß√£o ",
 								javax.swing.JOptionPane.YES_NO_OPTION, 0,
 								new ImageIcon(
 										getClass().getResource("/gui/icones/acoes/alerta.png"))) == 0) {

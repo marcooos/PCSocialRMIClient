@@ -58,7 +58,7 @@ public class AdicionarEmpresaUI extends JDialog {
 		// Instanciar Janela
 		dmsTela = new Dimension(800, 600);
 		adicionarEmpresa = new JDialog();
-		// Título da Janela
+		// T√£tulo da Janela
 		adicionarEmpresa.setTitle(t);
 
 		// Textos
@@ -135,7 +135,7 @@ public class AdicionarEmpresaUI extends JDialog {
 		panelCentral.setBorder(javax.swing.BorderFactory
 				.createTitledBorder("Dados gerais"));
 		panelTipoEmpresa.setBorder(javax.swing.BorderFactory
-				.createTitledBorder("Atribuições da empresa"));
+				.createTitledBorder("Atribui√ß√£es da empresa"));
 
 		// Acoes
 		btnConfirmar.setIcon(new ImageIcon(
@@ -148,7 +148,7 @@ public class AdicionarEmpresaUI extends JDialog {
 				getClass().getResource("/gui/icones/acoes/pesquisa.png")));
 		btnBuscarPessoa.addActionListener(al);
 
-		// Definindo ações check box
+		// Definindo a√ß√£es check box
 		jcAtribucaoMatriz.addActionListener(al);
 		jcAtribucaoFilial.addActionListener(al);
 
@@ -278,7 +278,7 @@ public class AdicionarEmpresaUI extends JDialog {
 
 				if (empresa.getPessoaEmpresa().getId() == 0) {
 					javax.swing.JOptionPane.showMessageDialog(null,
-							"Selecione uma pessoa", "Informação", 0,
+							"Selecione uma pessoa", "Informa√ß√£o", 0,
 							new ImageIcon(
 									getClass().getResource("/gui/icones/acoes/alerta.png")));
 				} else {
@@ -289,7 +289,7 @@ public class AdicionarEmpresaUI extends JDialog {
 									.showMessageDialog(
 											null,
 											"Cadastro realizado com sucesso",
-											"Informação",
+											"Informa√ß√£o",
 											0,
 											new ImageIcon(
 													getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -306,7 +306,7 @@ public class AdicionarEmpresaUI extends JDialog {
 									.showMessageDialog(
 											null,
 											"Cadastro alterado com sucesso",
-											"Informação",
+											"Informa√ß√£o",
 											0,
 											new ImageIcon(
 													getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -319,9 +319,9 @@ public class AdicionarEmpresaUI extends JDialog {
 				if (javax.swing.JOptionPane
 						.showConfirmDialog(
 								null,
-								"Deseja cancelar a operação? \n"
-										+ " Todas as informações não salvas serão perdidas",
-								"Confirme sua operação ",
+								"Deseja cancelar a opera√ß√£o? \n"
+										+ " Todas as informa√ß√£es n√£o salvas ser√£o perdidas",
+								"Confirme sua opera√ß√£o ",
 								javax.swing.JOptionPane.YES_NO_OPTION, 0,
 								new ImageIcon(
 										getClass().getResource("/gui/icones/acoes/alerta.png"))) == 0) {

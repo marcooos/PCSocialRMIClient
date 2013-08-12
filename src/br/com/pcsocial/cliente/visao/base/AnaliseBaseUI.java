@@ -85,9 +85,9 @@ public class AnaliseBaseUI extends JInternalFrame {
 		layoutSup = new GridLayout(2, 1);
 		layoutSupBotoes = new FlowLayout(FlowLayout.LEFT);
 		layoutInf = new FlowLayout(FlowLayout.LEFT);
-		cbSalvar = new JButton("Exportar gráfico");
+		cbSalvar = new JButton("Exportar gr√°fico");
 		cbCancelar = new JButton("Cancelar");
-		cbGerarGrafico = new JButton("Gerar gráfico");
+		cbGerarGrafico = new JButton("Gerar gr√°fico");
 		scrollPane = new JScrollPane();
 
 		// Instanciar Label
@@ -137,10 +137,10 @@ public class AnaliseBaseUI extends JInternalFrame {
 		panelInferior.setLayout(layoutInf);
 		panelPeriodo.setLayout(layoutInf);
 		panelPeriodo.setBorder(javax.swing.BorderFactory
-				.createTitledBorder("Selecione o perído"));
+				.createTitledBorder("Selecione o per√≠do"));
 		panelTipoGrafico.setLayout(layoutInf);
 		panelTipoGrafico.setBorder(javax.swing.BorderFactory
-				.createTitledBorder("Selecione o tipo do gráfico"));
+				.createTitledBorder("Selecione o tipo do gr√°fico"));
 
 		// Adicionar componentes aos paineis
 		panelPeriodo.add(lbDataInicial);
@@ -304,13 +304,13 @@ public class AnaliseBaseUI extends JInternalFrame {
 								javax.swing.JOptionPane
 										.showMessageDialog(
 												null,
-												"Seu gráfico foi salvo! \n"
+												"Seu gr√°fico foi salvo! \n"
 														+ jFileChooser1
 																.getSelectedFile()
 																.getAbsolutePath()
 														+ "//"
 														+ nomeArquivoSalvo(),
-												"Informação",
+												"Informa√ß√£o",
 												0,
 												new ImageIcon(
 														getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -324,13 +324,13 @@ public class AnaliseBaseUI extends JInternalFrame {
 								javax.swing.JOptionPane
 										.showMessageDialog(
 												null,
-												"Seu gráfico foi salvo! \n"
+												"Seu gr√°fico foi salvo! \n"
 														+ jFileChooser1
 																.getSelectedFile()
 																.getAbsolutePath()
 														+ "\\"
 														+ nomeArquivoSalvo(),
-												"Informação",
+												"Informa√ß√£o",
 												0,
 												new ImageIcon(
 														getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -341,8 +341,8 @@ public class AnaliseBaseUI extends JInternalFrame {
 						javax.swing.JOptionPane
 								.showMessageDialog(
 										null,
-										"Problema ao salvar gráfico",
-										"Informação",
+										"Problema ao salvar grÔøΩfico",
+										"InformaÔøΩÔøΩo",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes//informacao.png")));
@@ -350,7 +350,7 @@ public class AnaliseBaseUI extends JInternalFrame {
 
 				} catch (NullPointerException e3) {
 					javax.swing.JOptionPane.showMessageDialog(null,
-							"Gere um gráfico antes de salvar", "Informação", 0,
+							"Gere um grÔøΩfico antes de salvar", "InformaÔøΩÔøΩo", 0,
 							new ImageIcon(
 									getClass().getResource("/gui/icones/acoes/informacao.png")));
 				}
@@ -370,7 +370,7 @@ public class AnaliseBaseUI extends JInternalFrame {
 				}
 				if ((!jcPizza.isSelected()) && (!jcLinear.isSelected()) && (!jcBarras.isSelected())) {
 					javax.swing.JOptionPane.showMessageDialog(null,
-							"Selecione o tipo de gráfico", "Informação", 0,
+							"Selecione o tipo de gr√°fico", "Informa√ß√£o", 0,
 							new ImageIcon(
 									getClass().getResource("/gui/icones/acoes/informacao.png")));
 				}

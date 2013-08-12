@@ -50,15 +50,15 @@ public class AdicionarTiposApartamentoUI extends JDialog {
 		// Instanciar Janela
 		dmsTela = new Dimension(800, 600);
 		adicionarTiposApartamento = new JDialog();
-		// Título da Janela
+		// T√£tulo da Janela
 		adicionarTiposApartamento.setTitle(t);
 
 		// Textos
-		lbDescricao = new JLabel("Descrição", SwingConstants.RIGHT);
+		lbDescricao = new JLabel("Descri√ß√£o", SwingConstants.RIGHT);
 		lbDescricao.setPreferredSize(dmsLabel);
 		lbDescricaoAbreviada = new JLabel("Abreviacao", SwingConstants.RIGHT);
 		lbDescricaoAbreviada.setPreferredSize(dmsLabel);
-		lbCodPms = new JLabel("Cód. Pms", SwingConstants.RIGHT);
+		lbCodPms = new JLabel("C√£d. Pms", SwingConstants.RIGHT);
 		lbCodPms.setPreferredSize(dmsLabel);
 		lbQtdePool = new JLabel("Qtd. Pool", SwingConstants.RIGHT);
 		lbQtdePool.setPreferredSize(dmsLabel);
@@ -238,7 +238,7 @@ public class AdicionarTiposApartamentoUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro realizado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -257,7 +257,7 @@ public class AdicionarTiposApartamentoUI extends JDialog {
 								.showMessageDialog(
 										null,
 										"Cadastro alterado com sucesso",
-										"Informação",
+										"Informa√ß√£o",
 										0,
 										new ImageIcon(
 												getClass().getResource("/gui/icones/acoes/informacao.png")));
@@ -269,9 +269,9 @@ public class AdicionarTiposApartamentoUI extends JDialog {
 				if (javax.swing.JOptionPane
 						.showConfirmDialog(
 								null,
-								"Deseja cancelar a operação? \n"
-										+ " Todas as informações não salvas serão perdidas",
-								"Confirme sua operação ",
+								"Deseja cancelar a opera√ß√£o? \n"
+										+ " Todas as informa√ß√£es n√£o salvas ser√£o perdidas",
+								"Confirme sua opera√ß√£o ",
 								javax.swing.JOptionPane.YES_NO_OPTION, 0,
 								new ImageIcon(
 										getClass().getResource("/gui/icones/acoes/alerta.png"))) == 0) {

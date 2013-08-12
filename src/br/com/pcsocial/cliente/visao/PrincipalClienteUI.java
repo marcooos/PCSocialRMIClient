@@ -18,7 +18,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JToolBar;
 import javax.swing.KeyStroke;
 
-import br.com.pcsocial.cliente.visao.analise.OcupacaoSegClasTarifaUI;
+import br.com.pcsocial.cliente.visao.analise.OcupacaoSegUI;
 import br.com.pcsocial.cliente.visao.analise.TempoDePermanenciaUI;
 import br.com.pcsocial.cliente.visao.grid.ManterCanaisUI;
 import br.com.pcsocial.cliente.visao.grid.ManterClassesUI;
@@ -41,7 +41,7 @@ public class PrincipalClienteUI extends JFrame {
 			sairTB;
 
 	public PrincipalClienteUI() {
-		super("Gestão de receitas");
+		super("Gest√£o de receitas");
 
 		// inicializar componentes
 		menuItem = new JMenuItem();
@@ -76,7 +76,7 @@ public class PrincipalClienteUI extends JFrame {
 		toolbar.add(cadastroPessoasTB);
 		cadastroPessoasTB.addActionListener(al);
 		cadastroPessoasTB
-				.setToolTipText("Realizar manutenção no cadastro de pessoas");
+				.setToolTipText("Realizar manutenÔøΩÔøΩo no cadastro de pessoas");
 		cadastroPessoasTB.setActionCommand("pessoas");
 		cadastroPessoasTB.setIcon(new ImageIcon(
 				"src//gui//icones//barras//pessoas.png"));
@@ -84,7 +84,7 @@ public class PrincipalClienteUI extends JFrame {
 		toolbar.add(cadastroTarifasTB);
 		cadastroTarifasTB.addActionListener(al);
 		cadastroTarifasTB
-				.setToolTipText("Realizar manutenção no cadastro de tarifas");
+				.setToolTipText("Realizar manutenÔøΩÔøΩo no cadastro de tarifas");
 		cadastroTarifasTB.setActionCommand("tarifas");
 		cadastroTarifasTB.setIcon(new ImageIcon(
 				"src//gui//icones//barras//tarifas.png"));
@@ -92,7 +92,7 @@ public class PrincipalClienteUI extends JFrame {
 		toolbar.add(cadastroTemporadasTB);
 		cadastroTemporadasTB.addActionListener(al);
 		cadastroTemporadasTB
-				.setToolTipText("Realizar manutenção nas temporadas");
+				.setToolTipText("Realizar manutenÔøΩÔøΩo nas temporadas");
 		cadastroTemporadasTB.setActionCommand("temporadas");
 		cadastroTemporadasTB.setIcon(new ImageIcon(
 				"src//gui//icones//barras//temporadas.png"));
@@ -102,7 +102,7 @@ public class PrincipalClienteUI extends JFrame {
 		toolbar.add(sairTB);
 		sairTB.addActionListener(al);
 		sairTB.setActionCommand("sair");
-		sairTB.setToolTipText("Sair da aplicação");
+		sairTB.setToolTipText("Sair da aplicaÔøΩÔøΩo");
 		sairTB.setIcon(new ImageIcon("src//gui//icones//barras//sair.png"));
 	}
 
@@ -116,19 +116,19 @@ public class PrincipalClienteUI extends JFrame {
 				"src//gui//icones//menu//cadastros.png"));
 
 		// Segundo item de menu.
-		JMenu fileMenuAnalise = new JMenu("Análises");
+		JMenu fileMenuAnalise = new JMenu("AnÔøΩlises");
 		fileMenuAnalise.setMnemonic(KeyEvent.VK_A);
 		fileMenuAnalise.setIcon(new ImageIcon(
 				"src//gui//icones//menu//analises.png"));
 
 		// Terceiro item de menu.
-		JMenu fileMenuRelatorios = new JMenu("Relatórios");
+		JMenu fileMenuRelatorios = new JMenu("RelatÔøΩrios");
 		fileMenuRelatorios.setMnemonic(KeyEvent.VK_R);
 		fileMenuRelatorios.setIcon(new ImageIcon(
 				"src//gui//icones//menu//relatorios.png"));
 
 		// Quarto item de menu.
-		JMenu fileMenuParametros = new JMenu("Parâmetros");
+		JMenu fileMenuParametros = new JMenu("ParÔøΩmetros");
 		fileMenuParametros.setMnemonic(KeyEvent.VK_P);
 		fileMenuParametros.setIcon(new ImageIcon(
 				"src//gui//icones//menu//parametros.png"));
@@ -147,7 +147,7 @@ public class PrincipalClienteUI extends JFrame {
 		menuBar.add(fileMenuAjuda);
 
 		// Item de menu cadastro
-		menuItem = new JMenuItem("Hotéis");
+		menuItem = new JMenuItem("HotÔøΩis");
 		menuItem.setMnemonic(KeyEvent.VK_H);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_H,
 				ActionEvent.ALT_MASK));
@@ -212,7 +212,7 @@ public class PrincipalClienteUI extends JFrame {
 		fileMenuCadastro.add(menuItem);
 
 		// Item de menu cadastro.
-		menuItem = new JMenuItem("Restrições de tarifas");
+		menuItem = new JMenuItem("RestriÔøΩÔøΩes de tarifas");
 		menuItem.setMnemonic(KeyEvent.VK_C);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,
 				ActionEvent.ALT_MASK));
@@ -225,7 +225,7 @@ public class PrincipalClienteUI extends JFrame {
 		fileMenuCadastro.addSeparator();
 
 		// Item de menu cadastro
-		menuItem = new JMenuItem("Canais de Distribuição");
+		menuItem = new JMenuItem("Canais de DistribuiÔøΩÔøΩo");
 		menuItem.setMnemonic(KeyEvent.VK_D);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D,
 				ActionEvent.ALT_MASK));
@@ -264,8 +264,8 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuCadastro.add(menuItem);
 
-		// Item de menu análise
-		menuItem = new JMenuItem("Tempo de permanência");
+		// Item de menu anÔøΩlise
+		menuItem = new JMenuItem("Tempo de permanÔøΩncia");
 		menuItem.setMnemonic(KeyEvent.VK_T);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T,
 				ActionEvent.ALT_MASK));
@@ -274,8 +274,8 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
-		menuItem = new JMenuItem("Ocupaçao por segmento/classes de tarifas");
+		// Item de menu anÔøΩlise
+		menuItem = new JMenuItem("OcupaÔøΩao por segmento/classes de tarifas");
 		menuItem.setMnemonic(KeyEvent.VK_O);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
 				ActionEvent.ALT_MASK));
@@ -284,7 +284,7 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
+		// Item de menu anÔøΩlise
 		menuItem = new JMenuItem("Pricing");
 		menuItem.setMnemonic(KeyEvent.VK_P);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P,
@@ -294,8 +294,8 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
-		menuItem = new JMenuItem("Ocupação por restrições de tarifas");
+		// Item de menu anÔøΩlise
+		menuItem = new JMenuItem("OcupaÔøΩÔøΩo por restriÔøΩÔøΩes de tarifas");
 		menuItem.setMnemonic(KeyEvent.VK_R);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R,
 				ActionEvent.ALT_MASK));
@@ -304,7 +304,7 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
+		// Item de menu anÔøΩlise
 		menuItem = new JMenuItem("Overbooking");
 		menuItem.setMnemonic(KeyEvent.VK_K);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_K,
@@ -314,7 +314,7 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
+		// Item de menu anÔøΩlise
 		menuItem = new JMenuItem("Rentabilidade por segmento");
 		menuItem.setMnemonic(KeyEvent.VK_D);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D,
@@ -324,8 +324,8 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
-		menuItem = new JMenuItem("Consumo por segmento exceto diárias");
+		// Item de menu anÔøΩlise
+		menuItem = new JMenuItem("Consumo por segmento exceto diÔøΩrias");
 		menuItem.setMnemonic(KeyEvent.VK_G);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_G,
 				ActionEvent.ALT_MASK));
@@ -334,8 +334,8 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
-		menuItem = new JMenuItem("Estadia média por segmento");
+		// Item de menu anÔøΩlise
+		menuItem = new JMenuItem("Estadia mÔøΩdia por segmento");
 		menuItem.setMnemonic(KeyEvent.VK_T);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T,
 				ActionEvent.ALT_MASK));
@@ -344,8 +344,8 @@ public class PrincipalClienteUI extends JFrame {
 		menuItem.addActionListener(al);
 		fileMenuAnalise.add(menuItem);
 
-		// Item de menu análise
-		menuItem = new JMenuItem("Previsão de demandas flutuantes");
+		// Item de menu anÔøΩlise
+		menuItem = new JMenuItem("PrevisÔøΩo de demandas flutuantes");
 		menuItem.setMnemonic(KeyEvent.VK_F);
 		menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F,
 				ActionEvent.ALT_MASK));
@@ -486,7 +486,7 @@ public class PrincipalClienteUI extends JFrame {
 				}
 			}
 			if ("ocupacaoSegClasTarifa".equals(e.getActionCommand())) {
-				OcupacaoSegClasTarifaUI cmUI = new OcupacaoSegClasTarifaUI();
+				OcupacaoSegUI cmUI = new OcupacaoSegUI();
 				try {
 					desktop.add(cmUI.analiseBaseUI(desktop));
 					cmUI.pack();

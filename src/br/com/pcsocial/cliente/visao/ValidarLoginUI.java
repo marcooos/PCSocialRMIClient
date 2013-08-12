@@ -119,7 +119,7 @@ public class ValidarLoginUI {
 		dialog.add(painelInferior, BorderLayout.SOUTH);
 		dialog.setVisible(true);
 
-		// Eventos botões
+		// Eventos botÔøΩes
 		btnLogar.addActionListener(al);
 		btnSair.addActionListener(al);
 	}
@@ -139,7 +139,7 @@ public class ValidarLoginUI {
 					dialog.dispose();
 				} else {
 					JOptionPane.showMessageDialog(null,
-							"E-mail ou senha inválido", null, 0, new ImageIcon(getClass().getResource(
+							"E-mail ou senha inv√°lido", null, 0, new ImageIcon(getClass().getResource(
 									"/gui/icones/acoes/cancelar.png")));
 				}
 			}
@@ -148,7 +148,7 @@ public class ValidarLoginUI {
 						.showConfirmDialog(
 								null,
 								"Deseja cancelar o Login",
-								"Confirme sua operação ",
+								"Confirme sua opera√ß√£o ",
 								javax.swing.JOptionPane.YES_NO_OPTION,
 								0,
 								new ImageIcon(getClass().getResource(

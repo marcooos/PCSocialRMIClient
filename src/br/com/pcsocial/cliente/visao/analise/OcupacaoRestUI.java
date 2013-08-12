@@ -16,7 +16,7 @@ import br.com.pcsocial.cliente.visao.base.AnaliseBaseUI;
 import br.com.pcsocial.servidor.modelo.Hospedagem;
 import br.com.pcsocial.servidor.modelo.TempoDePermanencia;
 
-public class TempoDePermanenciaUI extends AnaliseBaseUI {
+public class OcupacaoRestUI extends AnaliseBaseUI {
 
 	private static final long serialVersionUID = 1L;
 	private int in = 0;
@@ -98,33 +98,33 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 
 	@Override
 	public String getTitulo() {
-		return "Análise de tempo de permanência";
+		return "Análise de ocupação por restrições de tarifas";
 	}
 
 	@Override
 	public String getTituloGrafico() {
-		return "Tempo médio de permanência";
+		return "Ocupação por restrições";
 	}
 
 	@Override
 	public String nomeArquivoSalvo() {
-		return "TempoDePerm" + String.valueOf(System.currentTimeMillis())
+		return "Ocupação" + String.valueOf(System.currentTimeMillis())
 				+ ".jpeg";
 	}
 
 	@Override
 	public String getLabelX() {
-		return "Dias";
+		return "Hospedagens";
 	}
 
 	@Override
 	public String getLabelY() {
-		return "Seguimentos";
+		return "Restrições";
 	}
 
 	@Override
 	public String getNomeSerie() {
-		return "Tempo de permanência";
+		return "Hospedagens";
 	}
 
 	public void montaList() {
@@ -138,7 +138,7 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 				tdp = new TempoDePermanencia();
 				tdp.setDescMercado(listHospedagem.get(in).getMercado()
 						.getDescricao());
-				tdp.setDiasHospedados(listHospedagem.get(in).getDiasHospedado());
+				tdp.setDiasHospedados(1);
 				listTdp.add(tdp);
 				tdp = null;
 			} else {
@@ -147,7 +147,7 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 							.equals(listTdp.get(i).getDescMercado())) {
 						tdp = listTdp.get(i);
 						tdp.setDiasHospedados(tdp.getDiasHospedados()
-								+ listHospedagem.get(in).getDiasHospedado());
+								+ 1);
 						listTdp.set(i, tdp);
 						up = true;
 						i++;
@@ -158,8 +158,7 @@ public class TempoDePermanenciaUI extends AnaliseBaseUI {
 					tdp = new TempoDePermanencia();
 					tdp.setDescMercado(listHospedagem.get(in).getMercado()
 							.getDescricao());
-					tdp.setDiasHospedados(listHospedagem.get(in)
-							.getDiasHospedado());
+					tdp.setDiasHospedados(1);
 					listTdp.add(tdp);
 					tdp = null;
 				}

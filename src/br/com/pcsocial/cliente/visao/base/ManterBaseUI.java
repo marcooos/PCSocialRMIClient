@@ -141,7 +141,7 @@ public class ManterBaseUI extends JInternalFrame {
 			}
 			if (e.getSource().equals(cbExcluir)) {
 				if (javax.swing.JOptionPane.showConfirmDialog(null,
-						"Deseja excluir o cadastro?", "Confirme sua operação ",
+						"Deseja excluir o cadastro?", "Confirme sua opera√ß√£o ",
 						javax.swing.JOptionPane.YES_NO_OPTION, 0,
 						new ImageIcon(getClass().getResource("/gui/icones/acoes/alerta.png"))) == 0) {
 					excluirCadastro();
